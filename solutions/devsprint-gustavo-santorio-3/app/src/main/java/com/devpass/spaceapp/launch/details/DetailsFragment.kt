@@ -1,4 +1,4 @@
-package com.devpass.spaceapp.launch
+package com.devpass.spaceapp.launch.details
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.devpass.spaceapp.databinding.FragmentDetailsBinding
 
-class FragmentDetails: Fragment() {
+class DetailsFragment: Fragment() {
 
     private var binding: FragmentDetailsBinding? = null
 
@@ -22,10 +22,25 @@ class FragmentDetails: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding?.apply {
+            tvTextCard.text = arguments?.getString(DESCRIPTION)
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         binding?.root
+    }
+
+    companion object{
+        private const val DESCRIPTION = "description"
+        fun newInstance(description : String) : DetailsFragment =
+            DetailsFragment().apply {
+                Bundle().apply {
+                    putString(DESCRIPTION, description)
+                }.also {
+                    arguments = it
+                }
+            }
     }
 }

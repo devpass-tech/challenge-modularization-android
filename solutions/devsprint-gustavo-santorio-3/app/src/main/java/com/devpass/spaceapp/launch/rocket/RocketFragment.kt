@@ -1,4 +1,4 @@
-package com.devpass.spaceapp.launch
+package com.devpass.spaceapp.launch.rocket
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.devpass.spaceapp.databinding.FragmentRocketBinding
 
-class FragmentRocket : Fragment() {
+class RocketFragment : Fragment() {
 
     private var binding: FragmentRocketBinding? = null
 
@@ -22,10 +22,19 @@ class FragmentRocket : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        binding?.root
+    companion object{
+        private const val ID = "id"
+
+        fun newInstance(id : String) : RocketFragment =
+            RocketFragment().apply {
+                Bundle().apply {
+                    putString(ID, id)
+                }.also {
+                    arguments = it
+                }
+            }
     }
 }

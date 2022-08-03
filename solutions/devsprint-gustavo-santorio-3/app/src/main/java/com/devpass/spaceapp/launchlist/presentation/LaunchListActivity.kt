@@ -13,7 +13,7 @@ class LaunchListActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLaunchListBinding
     private lateinit var adapter: LaunchListAdapter
 
-    private val viewModel : LaunchViewModel by viewModels()
+    private val viewModel : LaunchListViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

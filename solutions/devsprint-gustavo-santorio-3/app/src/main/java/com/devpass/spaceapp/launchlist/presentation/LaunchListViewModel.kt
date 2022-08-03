@@ -19,7 +19,7 @@ sealed class State {
     data class Failure(val error: String) : State()
 }
 
-class LaunchViewModel(private val repository: LaunchesRepository) : ViewModel() {
+class LaunchListViewModel(private val repository: LaunchesRepository) : ViewModel() {
 
     val state: MutableStateFlow<State> = MutableStateFlow(State.Loading)
 

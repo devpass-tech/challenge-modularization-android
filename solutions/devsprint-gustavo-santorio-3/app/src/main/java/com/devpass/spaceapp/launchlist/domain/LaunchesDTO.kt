@@ -1,7 +1,7 @@
 package com.devpass.spaceapp.launchlist.domain
 
 data class LaunchesDTO(
-    val docs: List<Doc>,
+    val docs: List<LaunchDTO>,
     val hasNextPage: Boolean,
     val hasPrevPage: Boolean,
     val limit: Int,
@@ -13,7 +13,7 @@ data class LaunchesDTO(
     val totalPages: Int
 )
 
-data class Doc(
+data class LaunchDTO(
     val auto_update: Boolean,
     val capsules: List<Any>,
     val cores: List<Core>,

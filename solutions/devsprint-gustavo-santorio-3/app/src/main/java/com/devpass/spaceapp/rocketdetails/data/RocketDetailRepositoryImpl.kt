@@ -13,7 +13,7 @@ class RocketDetailRepositoryImpl(private val rocketService: SpaceXAPIService =
     override suspend fun getDetailRocket(id: String): Flow<Result<RocketDetailVO>> =
         flow {
             runCatching {
-                val dataResult = rocketService.getDetailRocket(id)
+                val dataResult = rocketService.fetchDetailRocket(id)
                 emit(Result.success(RocketDetailVO(dataResult.name, dataResult.flickr_images.first(), dataResult.description)))
             }
         }
