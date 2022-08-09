@@ -3,6 +3,7 @@ package com.devpass.spaceapp.launchlist.presentation
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.devpass.spaceapp.launchlist.data.LaunchesRepositoryImpl
 import com.devpass.spaceapp.launchlist.domain.LaunchVO
 import com.devpass.spaceapp.launchlist.domain.LaunchesRepository
 import kotlinx.coroutines.Dispatchers
@@ -19,8 +20,9 @@ sealed class State {
     data class Failure(val error: String) : State()
 }
 
-class LaunchListViewModel(private val repository: LaunchesRepository) : ViewModel() {
+class LaunchListViewModel: ViewModel() {
 
+    private val repository: LaunchesRepository = LaunchesRepositoryImpl()
     val state: MutableStateFlow<State> = MutableStateFlow(State.Loading)
 
     init {

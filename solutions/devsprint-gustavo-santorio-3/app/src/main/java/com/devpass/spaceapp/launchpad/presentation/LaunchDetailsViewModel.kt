@@ -21,14 +21,13 @@ sealed class State {
     data class Failure(val error: String) : State()
 }
 
-class LaunchDetailsViewModel(
-    private val repository: FetchLaunchesRepository = FetchLaunchesRepositoryImpl()
-) : ViewModel() {
+class LaunchDetailsViewModel() : ViewModel() {
 
     companion object {
         const val ID = "5e9e4502f509092b78566f87"
     }
 
+    private val repository: FetchLaunchesRepository = FetchLaunchesRepositoryImpl()
     val state: MutableStateFlow<State> = MutableStateFlow(State.Loading)
 
     init {

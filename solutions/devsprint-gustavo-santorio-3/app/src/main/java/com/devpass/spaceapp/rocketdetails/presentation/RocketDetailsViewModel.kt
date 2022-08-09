@@ -19,8 +19,9 @@ sealed class State {
     data class Failure(val error: String) : State()
 }
 
-class RocketDetailsViewModel(private val repository: RocketDetailRepository = RocketDetailRepositoryImpl()) : ViewModel(){
+class RocketDetailsViewModel: ViewModel(){
 
+    private val repository: RocketDetailRepository = RocketDetailRepositoryImpl()
     val state: MutableStateFlow<State> = MutableStateFlow(State.Loading)
 
     init {
