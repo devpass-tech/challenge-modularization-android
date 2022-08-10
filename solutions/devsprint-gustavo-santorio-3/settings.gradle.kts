@@ -12,12 +12,13 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
-
-    versionCatalogs{
-        libs {
-            from(files('gradle/libs.version.toml'))
-        }
+        versionCatalogs {
+            create("libs") {
+                from(files("$rootDir/gradle/libs.version.toml"))
+            }
     }
 }
 rootProject.name = "devsprint-gustavo-santorio-3"
-include ':app'
+include(":app")
+include(":buildSrc")
+include(":buildSrc")
