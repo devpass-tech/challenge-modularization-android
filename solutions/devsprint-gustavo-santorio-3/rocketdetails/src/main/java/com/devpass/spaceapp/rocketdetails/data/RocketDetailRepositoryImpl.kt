@@ -1,15 +1,15 @@
 package com.devpass.spaceapp.rocketdetails.data
 
 import br.com.devpass.network.NetworkModule
-import com.devpass.spaceapp.network.SpaceXAPIService
+import com.devpass.spaceapp.rocketdetails.data.service.RocketDetailService
 import com.devpass.spaceapp.rocketdetails.domain.dto.RocketDetailVO
 import com.devpass.spaceapp.rocketdetails.domain.RocketDetailRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 class RocketDetailRepositoryImpl(
-    private val rocketService: SpaceXAPIService =
-        NetworkModule.retrofitInstance.create(SpaceXAPIService::class.java)
+    private val rocketService: RocketDetailService =
+        NetworkModule.retrofitInstance.create(RocketDetailService::class.java)
 ) : RocketDetailRepository {
 
     override suspend fun getDetailRocket(id: String): Flow<Result<RocketDetailVO>> =
