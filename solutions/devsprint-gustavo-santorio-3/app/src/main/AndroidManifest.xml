@@ -28,7 +28,7 @@
         </activity>
 
         <activity
-            android:name=".launchpad.presentation.LaunchpadDetailsActivity"
+            android:name="br.com.devpass.launchpad.presentation.LaunchpadDetailsActivity"
             android:exported="true"/>
 
         <meta-data

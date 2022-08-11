@@ -1,4 +1,4 @@
-package com.devpass.spaceapp.launchpad.domain.dto
+package br.com.devpass.launchpad.domain.dto
 
 data class LaunchpadDTO(
     val full_name: String,
