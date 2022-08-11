@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "devsprint-gustavo-santorio-3"
 include ':app'
+include ':rocketdetails'
