@@ -1,6 +1,6 @@
 package com.devpass.spaceapp.launchlist.data
 
-import com.devpass.spaceapp.data.api.NetworkModule
+import br.com.devpass.network.NetworkModule
 import com.devpass.spaceapp.network.SpaceXAPIService
 import com.devpass.spaceapp.launchlist.domain.LaunchVO
 import com.devpass.spaceapp.launchlist.domain.LaunchesRepository
@@ -9,10 +9,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 class LaunchesRepositoryImpl(
-    private val service: SpaceXAPIService =
-        NetworkModule.retrofitInstance
-            .create(SpaceXAPIService::class.java))
-    : LaunchesRepository {
+    private val service: SpaceXAPIService = NetworkModule.retrofitInstance
+        .create(SpaceXAPIService::class.java)
+) : LaunchesRepository {
 
     override suspend fun fetchLaunch(): Flow<Result<List<LaunchVO>>> =
         flow {
@@ -24,7 +23,8 @@ class LaunchesRepositoryImpl(
                         it.flight_number.toString(),
                         it.date_utc,
                         it.success.getStatus(),
-                        it.links.patch.small)
+                        it.links.patch.small
+                    )
                 }
             }.also {
                 emit(it)

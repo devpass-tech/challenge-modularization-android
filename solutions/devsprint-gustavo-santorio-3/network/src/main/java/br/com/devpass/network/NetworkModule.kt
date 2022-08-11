@@ -1,5 +1,5 @@
+package br.com.devpass.network
 
-package com.devpass.spaceapp.data.api
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

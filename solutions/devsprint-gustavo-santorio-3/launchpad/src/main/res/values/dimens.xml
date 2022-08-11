@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin_start_tittle_launchpad">20dp</dimen>
+    <dimen name="margin_top_tittle_launchpad">22dp</dimen>
+    <dimen name="size_tittle_launchpad_card">20sp</dimen>
+    <dimen name="height_card_launchpad">144dp</dimen>
+    <dimen name="margin_top_card_launchpad">24dp</dimen>
+</resources>

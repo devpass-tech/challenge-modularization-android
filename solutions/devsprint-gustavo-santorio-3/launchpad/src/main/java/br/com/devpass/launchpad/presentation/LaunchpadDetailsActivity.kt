@@ -1,14 +1,14 @@
-package com.devpass.spaceapp.launchpad.presentation
+package br.com.devpass.launchpad.presentation
 
 import android.os.Bundle
 import android.view.Gravity
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.devpass.spaceapp.R
-import com.devpass.spaceapp.databinding.ActivityLaunchpadDetailsBinding
-import com.devpass.spaceapp.utils.latitude
-import com.devpass.spaceapp.utils.longitude
+import br.com.devpass.launchpad.R
+import br.com.devpass.launchpad.databinding.ActivityLaunchpadDetailsBinding
+import br.com.devpass.launchpad.utils.latitude
+import br.com.devpass.launchpad.utils.longitude
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -52,7 +52,7 @@ class LaunchpadDetailsActivity : AppCompatActivity(), OnMapReadyCallback {
             viewModel.state.collect { state ->
                 when (state) {
                     is State.Loading -> {
-                            binding.viewFlipper.displayedChild = 0
+                        binding.viewFlipper.displayedChild = 0
                     }
                     is State.Success -> {
                         binding.apply {
