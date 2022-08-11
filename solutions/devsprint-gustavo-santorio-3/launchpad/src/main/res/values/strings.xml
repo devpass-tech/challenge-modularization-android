@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_name_launchpad">Vandenberg Air Force Base</string>
+    <string name="label_launchpad">VAFB SLC 4E</string>
+    <string name="tittle_card_launchpad">VAFB SLC 4E</string>
+    <string name="title_activity_launchpad_details_screen">LauchpadDetailsScreenActivity</string>
+    <string name="tab_launchpad">Launchpad</string>
+    <string name="label_site_launch">California</string>
+    <string name="label_launch_attempts">Launch Attempts: 15</string>
+    <string name="label_launch_successes">Launch Successes: 15</string>
+</resources>

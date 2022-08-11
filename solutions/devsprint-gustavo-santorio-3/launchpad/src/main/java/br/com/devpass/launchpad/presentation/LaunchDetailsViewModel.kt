@@ -1,9 +1,9 @@
-package com.devpass.spaceapp.launchpad.presentation
+package br.com.devpass.launchpad.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.devpass.spaceapp.launchpad.data.FetchLaunchesRepositoryImpl
-import com.devpass.spaceapp.launchpad.domain.FetchLaunchesRepository
+import br.com.devpass.launchpad.data.FetchLaunchesRepositoryImpl
+import br.com.devpass.launchpad.domain.FetchLaunchesRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
@@ -36,7 +36,7 @@ class LaunchDetailsViewModel() : ViewModel() {
 
     private fun fetchLaunchpadData(id: String = ID) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.fetchLaunchpadDetails(id = id).collect{result ->
+            repository.fetchLaunchpadDetails(id = id).collect { result ->
                 result.onSuccess {
                     state.value = State.Success(
                         name = it.name,

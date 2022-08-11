@@ -1,4 +1,4 @@
-package com.devpass.spaceapp.launchpad.domain.model
+package br.com.devpass.launchpad.domain.model
 
 data class LaunchpadVO(
     val name: String,
