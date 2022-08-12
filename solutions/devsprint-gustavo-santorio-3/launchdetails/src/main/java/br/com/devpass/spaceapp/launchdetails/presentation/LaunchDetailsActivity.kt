@@ -1,16 +1,11 @@
-package com.devpass.spaceapp.launchdetails.presentation
+package br.com.devpass.spaceapp.launchdetails.presentation
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import com.devpass.spaceapp.R
-import com.devpass.spaceapp.databinding.ActivityLaunchDetailsBinding
+import br.com.devpass.spaceapp.launchdetails.databinding.ActivityLaunchDetailsBinding
 
 class LaunchDetailsActivity : AppCompatActivity() {
-    lateinit var binding : ActivityLaunchDetailsBinding
+    lateinit var binding: ActivityLaunchDetailsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +18,7 @@ class LaunchDetailsActivity : AppCompatActivity() {
         binding.tvDescription.text = intent.extras?.getString(DESCRIPTION)
     }
 
-    companion object{
+    companion object {
         const val DESCRIPTION = "description"
     }
 
