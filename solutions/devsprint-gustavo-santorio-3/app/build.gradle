@@ -49,6 +49,7 @@ dependencies {
     implementation project(":components")
     implementation project(":launchpad")
     implementation project(":network")
+    implementation project(":launchlist")
     implementation(libs.bundles.android.core)
     implementation(libs.bundles.lifecycle)
     implementation(libs.activity.ktx)

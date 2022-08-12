@@ -1,14 +1,12 @@
-package com.devpass.spaceapp.launchlist.presentation
+package br.com.devpass.launchlist.presentation
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.devpass.spaceapp.launchlist.data.LaunchesRepositoryImpl
-import com.devpass.spaceapp.launchlist.domain.LaunchVO
-import com.devpass.spaceapp.launchlist.domain.LaunchesRepository
+import br.com.devpass.launchlist.data.LaunchesRepositoryImpl
+import br.com.devpass.launchlist.domain.LaunchVO
+import br.com.devpass.launchlist.domain.LaunchesRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 sealed class State {

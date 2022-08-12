@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_next_launches">Next Launches</string>
+    <string name="label_date">July 03, 2020</string>
+    <string name="label_status">Success</string>
+    <string name="label_number">#91</string>
+</resources>

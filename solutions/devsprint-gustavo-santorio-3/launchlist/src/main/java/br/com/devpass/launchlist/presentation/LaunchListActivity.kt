@@ -1,12 +1,11 @@
-package com.devpass.spaceapp.launchlist.presentation
+package br.com.devpass.launchlist.presentation
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.devpass.spaceapp.databinding.ActivityLaunchListBinding
-import com.devpass.spaceapp.launchlist.LaunchListAdapter
+import br.com.devpass.launchlist.databinding.ActivityLaunchListBinding
 import kotlinx.coroutines.launch
 
 class LaunchListActivity : AppCompatActivity() {

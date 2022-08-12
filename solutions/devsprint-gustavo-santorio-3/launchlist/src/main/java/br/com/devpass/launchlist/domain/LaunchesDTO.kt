@@ -1,4 +1,4 @@
-package com.devpass.spaceapp.launchlist.domain
+package br.com.devpass.launchlist.domain
 
 data class LaunchesDTO(
     val docs: List<LaunchDTO>,
