@@ -18,7 +18,7 @@
             android:value="${MAPS_API_KEY}"/>
 
         <activity
-            android:name="com.devpass.spaceapp.launchlist.presentation.LaunchListActivity"
+            android:name="br.com.devpass.launchlist.presentation.LaunchListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
