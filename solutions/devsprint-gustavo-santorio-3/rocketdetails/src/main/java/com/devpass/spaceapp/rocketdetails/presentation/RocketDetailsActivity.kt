@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.devpass.spaceapp.databinding.ActivityRocketDetailsBinding
+import com.devpass.spaceapp.rocketdetails.databinding.ActivityRocketDetailsBinding
 import kotlinx.coroutines.launch
 
 class RocketDetailsActivity : AppCompatActivity() {
