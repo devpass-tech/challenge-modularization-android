@@ -40,6 +40,7 @@ dependencies {
     implementation(libs.activity.ktx)
     implementation(libs.google.maps)
     implementation(libs.bundles.retrofit)
+    implementation(libs.picasso)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.bundles.junit.android)

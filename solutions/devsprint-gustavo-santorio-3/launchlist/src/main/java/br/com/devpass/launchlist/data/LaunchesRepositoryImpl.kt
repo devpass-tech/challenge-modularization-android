@@ -20,7 +20,7 @@ class LaunchesRepositoryImpl(
                         it.name,
                         it.flight_number.toString(),
                         it.date_utc,
-                        it.success.toString(),
+                        if (it.success) "sucesso" else "falha",
                         it.links.patch.small
                     )
                 }

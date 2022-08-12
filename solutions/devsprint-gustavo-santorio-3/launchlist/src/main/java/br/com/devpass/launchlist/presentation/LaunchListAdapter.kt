@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import br.com.devpass.launchlist.databinding.ListItemBinding
 import br.com.devpass.launchlist.domain.LaunchVO
+import com.squareup.picasso.Picasso
 
 class LaunchListAdapter : ListAdapter<LaunchVO, LaunchViewHolder>(LaunchVO) {
 
@@ -26,7 +27,7 @@ class LaunchViewHolder(binding: ListItemBinding) : RecyclerView.ViewHolder(bindi
     private val statusLaunch = binding.tvStatus
 
     fun bind(model: LaunchVO) {
-//        imageLaunch.setImageResource(model.image)
+        Picasso.get().load(model.image).into(imageLaunch)
         numberLaunch.text = model.number
         nameLaunch.text = model.name
         dateLaunch.text = model.date
