@@ -1,11 +1,11 @@
-package com.devpass.spaceapp.launchlist
+package br.com.devpass.launchlist.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.devpass.spaceapp.databinding.ListItemBinding
-import com.devpass.spaceapp.launchlist.domain.LaunchVO
+import br.com.devpass.launchlist.databinding.ListItemBinding
+import br.com.devpass.launchlist.domain.LaunchVO
 
 class LaunchListAdapter : ListAdapter<LaunchVO, LaunchViewHolder>(LaunchVO) {
 
